@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech for Girls - Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <h1>Tech for Girls</h1>
+            </div>
+            <p class="tagline">Empowering Women in Technology</p>
+        </header>
+
+        <!-- Main Registration Form -->
+        <main class="main-content">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Join Our Community</h2>
+                    <p>Register now and become part of our amazing tech community!</p>
+                </div>
+
+                <form id="registrationForm" class="registration-form">
+                    <!-- Basic Details Section -->
+                    <div class="section">
+                        <h3><i class="fas fa-user"></i> Basic Details</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="college">College/Department *</label>
+                                <select id="college" name="college" required>
+                                    <option value="">Select your college/department</option>
+                                    <option value="Computer Science">Computer Science</option>
+                                    <option value="Information Technology">Information Technology</option>
+                                    <option value="Electronics">Electronics & Communication</option>
+                                    <option value="Mechanical">Mechanical Engineering</option>
+                                    <option value="Civil">Civil Engineering</option>
+                                    <option value="Other Engineering">Other Engineering</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Sharing Section -->
+                    <div class="section">
+                        <h3><i class="fab fa-whatsapp"></i> Share & Spread the Word</h3>
+                        <div class="whatsapp-section">
+                            <p>Help us grow by sharing with your friends!</p>
+                            <div class="share-container">
+                                <button type="button" id="whatsappBtn" class="whatsapp-btn">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Share on WhatsApp
+                                </button>
+                                <div class="counter-display">
+                                    <span id="shareCounter">Click count: 0/5</span>
+                                </div>
+                            </div>
+                            <div id="shareComplete" class="share-complete hidden">
+                                <i class="fas fa-check-circle"></i>
+                                Sharing complete. Please continue.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- File Upload Section -->
+                    <div class="section">
+                        <h3><i class="fas fa-upload"></i> Upload Screenshot</h3>
+                        <div class="upload-container">
+                            <div class="file-upload" id="fileUpload">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Click to upload or drag and drop</p>
+                                <p class="file-info">Resume, Photo, or any relevant screenshot</p>
+                                <input type="file" id="screenshot" name="screenshot" accept="image/*,.pdf" required>
+                            </div>
+                            <div id="filePreview" class="file-preview hidden"></div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="submit-section">
+                        <button type="submit" id="submitBtn" class="submit-btn" disabled>
+                            <i class="fas fa-paper-plane"></i>
+                            Submit Registration
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message hidden">
+                    <div class="success-content">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>🎉 Your submission has been recorded!</h3>
+                        <p>Thanks for being part of Tech for Girls!</p>
+                        <div class="celebration">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Tech for Girls Community. Empowering women in technology.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
